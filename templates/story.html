@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/story.css')}}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="grid">
+            <div class="first-col">
+                <img src="https://cdn.pixabay.com/photo/2014/12/15/17/16/boardwalk-569314__480.jpg" alt="">
+            </div>
+            {% if story_ and answers %}
+            <div class="second-col">
+                <h1>Your Story</h1>
+                <p>{{story_.generate(answers)}}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
