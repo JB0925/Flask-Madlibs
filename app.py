@@ -1,5 +1,5 @@
-from choices import CHOICES
-from stories import story as my_story
+from helpers.choices import CHOICES
+from helpers.stories import story as my_story
 
 from flask import Flask, request, render_template, url_for, redirect
 
