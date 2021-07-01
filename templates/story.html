@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/story.css')}}">
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="grid">
-            <div class="first-col">
-                <img src="https://cdn.pixabay.com/photo/2014/12/15/17/16/boardwalk-569314__480.jpg" alt="">
+    <div class="center">
+        <div class="container">
+            <div class="grid">
+                {% if story_ and answers %}
+                <div class="first-col">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81s2vppg-VL.jpg" alt="MadLibs">
+                </div>
+                <div class="second-col">
+                    <h1>Your Story</h1>
+                    <p>{{story_.generate(answers)}}</p>
+                </div>
+                {% else %}
+                <div class="first-col">
+                    <img src="https://drudesk.com/sites/default/files/2018-02/404-error-page-not-found.jpg" alt="not found">
+                </div>
+                <div class="second-col">
+                    <h1>Sorry, no story found!</h1>
+                </div>
+                {% endif %}
             </div>
-            {% if story_ and answers %}
-            <div class="second-col">
-                <h1>Your Story</h1>
-                <p>{{story_.generate(answers)}}</p>
-            </div>
-            {% endif %}
         </div>
     </div>
 

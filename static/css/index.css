@@ -5,10 +5,17 @@ main {
     width: 100%;
     margin-left: 17%;
     border: 10px solid gold;
-    padding-bottom: 20px;
 }
 
-form {
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    align-self: center;
+}
+
+.container form {
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -17,7 +24,11 @@ form {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 20px;
+    background-color: #0d3b66;
+}
+
+form h2 {
+    color: white;
 }
 
 label {
@@ -26,11 +37,13 @@ label {
     align-self: center;
     text-align: left;
     margin: 10px 0px;
+    color: white;
 }
 
 input {
     height: 35px;
     border-radius: 5px;
+    padding-left: 5px;
 }
 
 button {
@@ -40,4 +53,22 @@ button {
     background-color: #446df6;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+.space {
+    height: 30%;
+}
+
+#selection {
+    background-color: white;
+    width: 200px;
+    height: 100px;
+}
+
+#selection option {
+    width: 160px;
+}
+
+main h2 {
+    text-align: center;
 }

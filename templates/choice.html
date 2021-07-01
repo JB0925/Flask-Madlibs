@@ -6,21 +6,20 @@
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 {% endblock %}
+
 {% block content %}
 <main>
+    <h2>Choose Your Story Type</h2>
     <div class="container">
-        <form action="/story" method="POST">
-            <h2>Create a Madlib!</h2>
-            {% for prompt in story.prompts %}
-                <label for="{{prompt}}">{{prompt.title()}}</label>
-                <input name="{{prompt}}" id="{{prompt}}" type="text" placeholder="Enter a(n) {{prompt}}" required>
-            {% endfor %}
-            <button type="submit">Submit</button>
+        <form action="#" method="POST" id="selection">
+            <select name="choices" id="choices" required>
+                <option value="bball">Basketball</option>
+                <option value="school">School</option>
+                <option value="circus">Circus</option>
+            </select>
+            <button>Submit</button>
         </form>
     </div>
 </main>
-<div class="space"></div>
-
-
-
 {% endblock %}
+
